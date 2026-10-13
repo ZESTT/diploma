@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Orientation - IT Gate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="progress-bar"><div id="progress" class="progress"></div></div>
+
+    <button id="fullscreenBtn" class="fullscreen-btn" title="Toggle Full Screen">
+        <span id="fullscreenIcon">⛶</span>
+    </button>
+
+    <div class="presentation-container" id="presentationContainer">
+
+        <div class="slide active" id="slide1">
+            <div class="content center-content">
+                <img src="it.png" alt="VL gate Logo" class="logo-main">
+                <h1 class="reveal">Full Stack Diploma</h1>
+                <h2 class="reveal delay-1">HTML, CSS, JS, React, Node.js</h2>
+                <p class="reveal delay-2">Presented by: ENG Ahmed Halabi</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide2">
+            <h2 class="slide-title reveal">How the Web Works</h2>
+            <div class="grid-3">
+                <div class="card reveal delay-1">
+                    <div class="icon">🌐</div>
+                    <h3>Domain (DNS)</h3>
+                    <p>Maps human-readable names to IP addresses.</p>
+                </div>
+                <div class="card reveal delay-2">
+                    <div class="icon">📡</div>
+                    <h3>HTTP/HTTPS</h3>
+                    <p>The protocol for transferring data.</p>
+                </div>
+                <div class="card reveal delay-3">
+                    <div class="icon">🖥️</div>
+                    <h3>Server</h3>
+                    <p>Stores and serves your website 24/7.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide3">
+            <h2 class="slide-title reveal">Client-Server Model</h2>
+            <div class="content center-content">
+                <div class="diagram reveal delay-1">
+                    <div class="box front">Client (Browser)</div>
+                    <div class="arrow">⇄ HTTP ⇄</div>
+                    <div class="box back">Server (Node.js)</div>
+                </div>
+                <ul class="center-list">
+                    <li class="reveal delay-2"><strong>Request:</strong> GET /api/data</li>
+                    <li class="reveal delay-3"><strong>Response:</strong> 200 OK + JSON</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide" id="slide4">
+            <h2 class="slide-title reveal">HTML: The Structure</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Tags:</strong> &lt;h1&gt;, &lt;p&gt;, &lt;div&gt;.</li>
+                        <li class="reveal delay-2"><strong>Semantic:</strong> &lt;header&gt;, &lt;main&gt;.</li>
+                        <li class="reveal delay-3"><strong>Attributes:</strong> id, class.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">index.html</span></div>
+                        <pre class="code-block">&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/main&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide5">
+            <h2 class="slide-title reveal">HTML</h2>
+            <div class="content center-content">
+                <div class="car-stage reveal delay-1">
+                    <div class="car-html">
+                        <div class="car-body"></div>
+                        <div class="car-wheel wheel-front"></div>
+                        <div class="car-wheel wheel-back"></div>
+                        <div class="car-window"></div>
+                    </div>
+                </div>
+                <p class="reveal delay-2 center-text">No style, no colors. Just the HTML structure.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide6">
+            <h2 class="slide-title reveal">CSS: The Styling</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Selectors:</strong> .class, #id.</li>
+                        <li class="reveal delay-2"><strong>Box Model:</strong> Margin, Border, Padding.</li>
+                        <li class="reveal delay-3"><strong>Layout:</strong> Flexbox & Grid.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">style.css</span></div>
+                        <pre class="code-block">body {
+  background: #f0f0f0;
+  color: #333;
+}
+h1 { color: #1A237E; }</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide7">
+            <h2 class="slide-title reveal">CSS</h2>
+            <div class="content center-content">
+                <div class="car-stage reveal delay-1">
+                    <div class="car-styled">
+                        <div class="car-body">
+                            <div class="car-window"></div>
+                            <div class="car-light light-front"></div>
+                            <div class="car-light light-back"></div>
+                        </div>
+                        <div class="car-wheel wheel-front"></div>
+                        <div class="car-wheel wheel-back"></div>
+                    </div>
+                </div>
+                <p class="reveal delay-2 center-text">Now with colors, shadows, and realistic details.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide8">
+            <h2 class="slide-title reveal">JavaScript: The Logic</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Variables:</strong> let, const.</li>
+                        <li class="reveal delay-2"><strong>DOM:</strong> document.querySelector.</li>
+                        <li class="reveal delay-3"><strong>Events:</strong> addEventListener.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">script.js</span></div>
+                        <pre class="code-block">const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+  console.log('Hello!');
+});</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide9">
+            <h2 class="slide-title reveal">JavaScript</h2>
+            <div class="content center-content">
+                <div class="car-stage reveal delay-1">
+                    <div class="car-moving">
+                        <div class="car-body">
+                            <div class="car-window"></div>
+                            <div class="car-light light-front"></div>
+                            <div class="car-light light-back"></div>
+                        </div>
+                        <div class="car-wheel wheel-front"></div>
+                        <div class="car-wheel wheel-back"></div>
+                    </div>
+                </div>
+                <p class="reveal delay-2 center-text">JavaScript brings the car to life with motion.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide10">
+            <h2 class="slide-title reveal">ECMAScript Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal delay-1"><div class="year">1997</div><div class="version">ES1</div></div>
+                <div class="timeline-item reveal delay-2"><div class="year">1999</div><div class="version">ES3</div></div>
+                <div class="timeline-item reveal delay-3"><div class="year">2009</div><div class="version">ES5</div></div>
+                <div class="timeline-item reveal delay-4"><div class="year">2015</div><div class="version">ES6</div></div>
+                <div class="timeline-item reveal delay-5"><div class="year">2017</div><div class="version">ES8</div></div>
+                <div class="timeline-item reveal delay-6"><div class="year">2024</div><div class="version">ES15</div></div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide11">
+            <h2 class="slide-title reveal"> Request & Response</h2>
+            <div class="live-sim-container reveal delay-1">
+                <div class="sim-box user-box">
+                    <div class="sim-icon">👤</div>
+                    <h3>User</h3>
+                </div>
+                <div class="sim-track">
+                    <div class="sim-packet request-packet" id="reqPacket">GET /api/data</div>
+                    <div class="sim-packet response-packet" id="resPacket">200 OK + JSON</div>
+                </div>
+                <div class="sim-box server-box">
+                    <div class="sim-icon">🖥️</div>
+                    <h3>Server</h3>
+                </div>
+            </div>
+            <div class="sim-steps reveal delay-2">
+                <div class="sim-step" id="step1">1. User sends request</div>
+                <div class="sim-step" id="step2">2. Server processes</div>
+                <div class="sim-step" id="step3">3. Server responds</div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide12">
+            <h2 class="slide-title reveal">TypeScript</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Static Typing:</strong> Catch errors early.</li>
+                        <li class="reveal delay-2"><strong>Interfaces:</strong> Define object shapes.</li>
+                        <li class="reveal delay-3"><strong>Used by:</strong> Angular, NestJS.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">types.ts</span></div>
+                        <pre class="code-block">interface User {
+  id: number;
+  name: string;
+}
+const user: User = { id: 1, name: 'VL' };</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide13">
+            <h2 class="slide-title reveal">Sass (SCSS)</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Variables:</strong> $primary: #1A237E;</li>
+                        <li class="reveal delay-2"><strong>Nesting:</strong> Cleaner CSS.</li>
+                        <li class="reveal delay-3"><strong>Mixins:</strong> Reusable blocks.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">style.scss</span></div>
+                        <pre class="code-block">$primary: #1A237E;
+.card {
+  background: $primary;
+  &:hover { background: darken($primary, 10%); }
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide14">
+            <h2 class="slide-title reveal">Bootstrap</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Grid:</strong> 12-column layout.</li>
+                        <li class="reveal delay-2"><strong>Components:</strong> Buttons, Navbars.</li>
+                        <li class="reveal delay-3"><strong>Utility:</strong> m-3, p-2, text-center.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">bootstrap.html</span></div>
+                        <pre class="code-block">&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-6"&gt;
+      &lt;button class="btn btn-primary"&gt;Click&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide15">
+            <h2 class="slide-title reveal">Tailwind CSS</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Utility-First:</strong> bg-blue-500, p-4.</li>
+                        <li class="reveal delay-2"><strong>No Custom CSS:</strong> Style in HTML.</li>
+                        <li class="reveal delay-3"><strong>Used by:</strong> Vercel, OpenAI.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">tailwind.html</span></div>
+                        <pre class="code-block">&lt;button class="bg-blue-500 text-white
+  font-bold py-2 px-4 rounded
+  hover:bg-blue-700"&gt;
+  Click Me
+&lt;/button&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide16">
+            <h2 class="slide-title reveal">Why React.js?</h2>
+            <div class="grid-3">
+                <div class="card reveal delay-1"><div class="icon">⚛️</div><h3>Components</h3><p>Reusable UI blocks.</p></div>
+                <div class="card reveal delay-2"><div class="icon">🚀</div><h3>Virtual DOM</h3><p>Blazing fast updates.</p></div>
+                <div class="card reveal delay-3"><div class="icon">🌍</div><h3>Ecosystem</h3><p>Next.js, React Native.</p></div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide17">
+            <h2 class="slide-title reveal"> Companies Using React</h2>
+            <div class="company-grid">
+                <div class="company-card reveal delay-1"><div class="company-logo">📘</div><h3>Facebook</h3><p>Created React</p></div>
+                <div class="company-card reveal delay-2"><div class="company-logo">📸</div><h3>Instagram</h3><p>Built with React</p></div>
+                <div class="company-card reveal delay-3"><div class="company-logo">🎬</div><h3>Netflix</h3><p>Uses React UI</p></div>
+                <div class="company-card reveal delay-4"><div class="company-logo">💬</div><h3>WhatsApp</h3><p>Web uses React</p></div>
+                <div class="company-card reveal delay-5"><div class="company-logo">🐦</div><h3>Twitter (X)</h3><p>Uses React</p></div>
+                <div class="company-card reveal delay-6"><div class="company-logo">📌</div><h3>Pinterest</h3><p>Uses React</p></div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide18">
+            <h2 class="slide-title reveal">React: Components & JSX</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>JSX:</strong> HTML in JavaScript.</li>
+                        <li class="reveal delay-2"><strong>Props:</strong> Parent to child data.</li>
+                        <li class="reveal delay-3"><strong>Reusable:</strong> Write once.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">Welcome.jsx</span></div>
+                        <pre class="code-block">function Welcome(props) {
+  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+&lt;Welcome name="VL gate" /&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide19">
+            <h2 class="slide-title reveal">React: State & Hooks</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>useState:</strong> Local state.</li>
+                        <li class="reveal delay-2"><strong>useEffect:</strong> Side effects.</li>
+                        <li class="reveal delay-3"><strong>Events:</strong> onClick, onChange.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">Counter.jsx</span></div>
+                        <pre class="code-block">import { useState } from 'react';
+function Counter() {
+  const [count, setCount] = useState(0);
+  return &lt;button onClick={() => setCount(count + 1)}&gt;
+    Count: {count}&lt;/button&gt;;
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide20">
+            <h2 class="slide-title reveal">Next.js</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>SSR:</strong> Better SEO.</li>
+                        <li class="reveal delay-2"><strong>SSG:</strong> Pre-rendered pages.</li>
+                        <li class="reveal delay-3"><strong>API Routes:</strong> Backend in same project.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">pages/index.js</span></div>
+                        <pre class="code-block">export default function Home() {
+  return &lt;div&gt;&lt;h1&gt;Welcome&lt;/h1&gt;&lt;/div&gt;;
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide21">
+            <h2 class="slide-title reveal"> Companies Using Next.js</h2>
+            <div class="company-grid">
+                <div class="company-card reveal delay-1"><div class="company-logo">▲</div><h3>Vercel</h3><p>Created Next.js</p></div>
+                <div class="company-card reveal delay-2"><div class="company-logo">🎵</div><h3>TikTok</h3><p>Uses Next.js</p></div>
+                <div class="company-card reveal delay-3"><div class="company-logo">🛍️</div><h3>Shopify</h3><p>Uses Next.js</p></div>
+                <div class="company-card reveal delay-4"><div class="company-logo">🎮</div><h3>Twitch</h3><p>Uses Next.js</p></div>
+                <div class="company-card reveal delay-5"><div class="company-logo">📰</div><h3>Notion</h3><p>Uses Next.js</p></div>
+                <div class="company-card reveal delay-6"><div class="company-logo">🤖</div><h3>OpenAI</h3><p>Uses Next.js</p></div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide22">
+            <h2 class="slide-title reveal">Node.js</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Runtime:</strong> JS on server.</li>
+                        <li class="reveal delay-2"><strong>Non-Blocking:</strong> Handles thousands.</li>
+                        <li class="reveal delay-3"><strong>NPM:</strong> Package manager.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js" class="tech-logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide23">
+            <h2 class="slide-title reveal"> Apps Built with Node.js</h2>
+            <div class="company-grid">
+                <div class="company-card reveal delay-1"><div class="company-logo">🎬</div><h3>Netflix</h3><p>Streaming</p></div>
+                <div class="company-card reveal delay-2"><div class="company-logo">🚗</div><h3>Uber</h3><p>Real-time</p></div>
+                <div class="company-card reveal delay-3"><div class="company-logo">💳</div><h3>PayPal</h3><p>Transactions</p></div>
+                <div class="company-card reveal delay-4"><div class="company-logo">💼</div><h3>LinkedIn</h3><p>Scalable</p></div>
+                <div class="company-card reveal delay-5"><div class="company-logo">📦</div><h3>Amazon</h3><p>Services</p></div>
+                <div class="company-card reveal delay-6"><div class="company-logo">💬</div><h3>Slack</h3><p>Messaging</p></div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide24">
+            <h2 class="slide-title reveal">Express.js</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Framework:</strong> Minimal Node.js.</li>
+                        <li class="reveal delay-2"><strong>Routing:</strong> GET, POST, PUT, DELETE.</li>
+                        <li class="reveal delay-3"><strong>Middleware:</strong> Pre-handler functions.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">server.js</span></div>
+                        <pre class="code-block">const express = require('express');
+const app = express();
+app.get('/api/data', (req, res) => {
+  res.json([{ id: 1, name: 'John' }]);
+});
+app.listen(5000);</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide25">
+            <h2 class="slide-title reveal">MongoDB & Mongoose</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>NoSQL:</strong> JSON-like documents.</li>
+                        <li class="reveal delay-2"><strong>Mongoose:</strong> ODM for Node.js.</li>
+                        <li class="reveal delay-3"><strong>CRUD:</strong> Create, Read, Update, Delete.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">models/User.js</span></div>
+                        <pre class="code-block">const mongoose = require('mongoose');
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String
+});
+module.exports = mongoose.model('User', userSchema);</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide26">
+            <h2 class="slide-title reveal">Full Stack Workflow</h2>
+            <div class="workflow">
+                <div class="step reveal delay-1">1. User submits form in React</div>
+                <div class="arrow-down reveal delay-2">⬇</div>
+                <div class="step reveal delay-3">2. React sends POST to Express</div>
+                <div class="arrow-down reveal delay-4">⬇</div>
+                <div class="step reveal delay-5">3. Express saves to MongoDB</div>
+                <div class="arrow-down reveal delay-6">⬇</div>
+                <div class="step reveal delay-7">4. MongoDB returns document</div>
+                <div class="arrow-down reveal delay-8">⬇</div>
+                <div class="step reveal delay-9">5. Express sends JSON to React</div>
+                <div class="arrow-down reveal delay-10">⬇</div>
+                <div class="step reveal delay-11">6. React updates UI</div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide27">
+            <h2 class="slide-title reveal">Authentication: JWT & Bcrypt</h2>
+            <div class="content-split">
+                <div class="text-side">
+                    <ul>
+                        <li class="reveal delay-1"><strong>Bcrypt:</strong> Hash passwords.</li>
+                        <li class="reveal delay-2"><strong>JWT:</strong> Secure user identity.</li>
+                        <li class="reveal delay-3"><strong>Protected Routes:</strong> Token required.</li>
+                    </ul>
+                </div>
+                <div class="visual-side reveal delay-4">
+                    <div class="code-snapshot">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="filename">auth.js</span></div>
+                        <pre class="code-block">const token = jwt.sign(
+  { userId: user._id },
+  process.env.JWT_SECRET,
+  { expiresIn: '1h' }
+);</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide28">
+            <h2 class="slide-title reveal">Roadmap to Mastery</h2>
+            <ul class="roadmap">
+                <li class="reveal delay-1"><span>1</span> HTML, CSS, JS</li>
+                <li class="reveal delay-2"><span>2</span> Advanced JS: ES6+</li>
+                <li class="reveal delay-3"><span>3</span> TypeScript & Sass</li>
+                <li class="reveal delay-4"><span>4</span> React & Next.js</li>
+                <li class="reveal delay-5"><span>5</span> Node.js & Express</li>
+                <li class="reveal delay-6"><span>6</span> MongoDB & Mongoose</li>
+                <li class="reveal delay-7"><span>7</span> Build a Project</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide29">
+            <div class="content center-content">
+                <h1 class="reveal">Thank You!</h1>
+                <h2 class="reveal delay-1">Any Questions?</h2>
+                <img src="it.png" alt="VL gate Logo" class="logo-footer reveal delay-2">
+                <p class="reveal delay-3">ItGate</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <button id="prevBtn">Previous</button>
+        <span id="slideCounter">1 / 29</span>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
